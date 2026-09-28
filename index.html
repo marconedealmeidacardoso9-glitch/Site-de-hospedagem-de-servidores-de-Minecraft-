@@ -1,2 +1,105 @@
-# Site-de-hospedagem-de-servidores-de-Minecraft-
-Site de hospedagem de servidores de Minecraft grátis 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BlocoHost – Servidor de Minecraft grátis 24 horas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Nunito:wght@400;600;800&display=swap">
+<style>
+:root{--sky:#bfe3f7;--sky2:#e8f6fd;--ink:#2a2118;--dirt:#7a5232;--grass:#4f9d2d;--grass-d:#3a7a20;--stone:#8b8f94;--gold:#f2b632;--card:#fffdf7;--line:#2a2118;--muted:#5d5246;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sky:#16283a;--sky2:#1c3349;--ink:#f3ead9;--card:#243242;--line:#0d1620;--muted:#b7ad9d;--grass:#5fb83a;--grass-d:#4a9a2b}}
+:root[data-theme="dark"]{--sky:#16283a;--sky2:#1c3349;--ink:#f3ead9;--card:#243242;--line:#0d1620;--muted:#b7ad9d;--grass:#5fb83a;--grass-d:#4a9a2b}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--sky);color:var(--ink);font:400 17px/1.55 Nunito,system-ui,sans-serif}
+h1,h2,h3,.px{font-family:Silkscreen,"Courier New",monospace;font-weight:700;line-height:1.15;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;font-family:Silkscreen,monospace;font-weight:700;font-size:20px;text-decoration:none}
+.cube{width:26px;height:26px;background:linear-gradient(var(--grass) 0 38%,var(--dirt) 38%);border:3px solid var(--line);box-shadow:inset -4px -4px 0 rgba(0,0,0,.18)}
+nav a{margin-left:18px;text-decoration:none;font-weight:800;font-size:15px}
+.btn{display:inline-block;background:var(--grass);color:#fff;font-family:Silkscreen,monospace;font-weight:700;font-size:16px;padding:14px 22px;border:3px solid var(--line);box-shadow:0 5px 0 var(--line);text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--grass-d)}.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--line)}
+.btn.alt{background:var(--card);color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:40px 0 64px}
+.hero h1{font-size:clamp(30px,5.5vw,54px)}
+.hero p{max-width:34em;color:var(--muted);font-size:19px;margin:18px 0 26px}
+.status{background:var(--card);border:3px solid var(--line);box-shadow:8px 8px 0 var(--line);padding:18px}
+.status .top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}
+.dot{display:inline-block;width:12px;height:12px;background:#3ddc4a;border:2px solid var(--line);margin-right:8px;animation:blink 1.6s steps(2) infinite}
+@keyframes blink{50%{opacity:.35}}
+.up{font-family:Silkscreen,monospace;font-size:clamp(22px,5vw,32px);font-weight:700;margin:4px 0 2px}
+.small{font-size:14px;color:var(--muted)}
+.console{background:#1b1b1b;color:#9df58a;font:14px/1.6 "Courier New",monospace;padding:12px;margin-top:14px;min-height:118px;overflow:hidden;border:3px solid var(--line)}
+.ground{height:36px;background:linear-gradient(var(--grass) 0 14px,var(--dirt) 14px);border-top:4px solid var(--line)}
+section{padding:64px 0}
+.light{background:var(--sky2)}
+h2{font-size:clamp(24px,4vw,36px);margin-bottom:10px}
+.lead{color:var(--muted);max-width:36em;margin:0 0 30px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.feat div{background:var(--card);border:3px solid var(--line);padding:18px}
+.feat h3{font-size:16px;margin-bottom:8px}.feat p{margin:0;color:var(--muted);font-size:16px}
+.plan{background:var(--card);border:3px solid var(--line);padding:22px;display:flex;flex-direction:column}
+.plan.top{box-shadow:8px 8px 0 var(--gold)}
+.plan h3{font-size:20px}.price{font-family:Silkscreen,monospace;font-size:34px;font-weight:700;margin:12px 0 2px}
+.plan ul{list-style:none;padding:0;margin:14px 0 22px;flex:1}
+.plan li{padding:6px 0;border-bottom:2px dashed var(--stone)}
+.plan li:before{content:"■ ";color:var(--grass)}
+details{background:var(--card);border:3px solid var(--line);padding:14px 18px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:800}
+details p{margin:10px 0 0;color:var(--muted)}
+footer{background:var(--dirt);color:#f6ead8;padding:28px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){.hero{grid-template-columns:1fr}nav a:not(.btn){display:none}}
+@media(prefers-reduced-motion:reduce){.dot{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<a class="logo" href="#"><span class="cube"></span>BlocoHost</a>
+<nav><a href="#recursos">Recursos</a><a href="#planos">Grátis</a><a href="#duvidas">Dúvidas</a><a class="btn" style="font-size:13px;padding:8px 14px;margin-left:18px" href="#planos">Começar grátis</a></nav>
+</header>
+<div class="hero">
+<div>
+<h1>Seu mundo nunca dorme.</h1>
+<p>Servidor de Minecraft 100% grátis, ligado 24 horas por dia. Sem cartão de crédito, sem período de teste. Seus amigos entram a qualquer hora, mesmo com você offline.</p>
+<a class="btn" href="#planos">Criar servidor grátis</a> <a class="btn alt" href="#recursos">Como funciona</a>
+</div>
+<div class="status" aria-live="off">
+<div class="top"><strong><span class="dot"></span>mundo-da-turma.bloco.host</strong><span class="small">Java 1.21</span></div>
+<div class="small">Ligado sem parar há</div>
+<div class="up" id="up">--</div>
+<div class="small"><span id="pl">7</span> jogadores online agora</div>
+<div class="console" id="con"></div>
+</div>
+</div>
+</div>
+<div class="ground"></div>
+
+<section id="recursos" class="light"><div class="wrap">
+<h2>Ligado sempre. Sem você fazer nada.</h2>
+<p class="lead">Você cria o servidor, a gente cuida do resto.</p>
+<div class="feat">
+<div><h3>Online 24/7</h3><p>Fica ligado o dia todo, sem precisar renovar. Se cair, reiniciamos sozinhos em segundos.</p></div>
+<div><h3>Pronto em 1 minuto</h3><p>Escolha Java ou Bedrock, Paper, Fabric ou Forge. Instalação automática.</p></div>
+<div><h3>Backup diário</h3><p>Seu mundo é salvo todo dia. Fez uma explosão de TNT? Volte no tempo com um clique.</p></div>
+<div><h3>Proteção contra ataques</h3><p>Filtro anti-DDoS incluso, sem custo.</p></div>
+<div><h3>Painel simples</h3><p>Ligue, desligue, instale mods e adicione amigos como operadores direto do celular.</p></div>
+<div><h3>Suporte em português</h3><p>Ajuda humana todos os dias, inclusive fim de semana.</p></div>
+</div></div></section>
+
+<section id="planos"><div class="wrap">
+<h2>Seu servidor, de graça</h2>
+<p class="lead">Sem taxa, sem cartão, sem pegadinha. Crie agora e jogue em um minuto.</p>
+<div class="plan top" style="max-width:420px"><h3>Servidor Grátis</h3><div class="small">Para você e sua turma</div><div class="price">R$ 0</div><div class="small">para sempre</div>
+<ul><li>Ligado 24 horas, 7 dias</li><li>3 GB de RAM</li><li>Até 20 jogadores</li><li>10 GB de SSD</li><li>Mods e plugins (Paper, Fabric, Forge)</li><li>Java e Bedrock</li><li>Backup diário</li></ul><a class="btn" href="#">Criar servidor grátis</a></div>
+</div></div></section>
+
+<section id="duvidas" class="light"><div class="wrap">
+<h2>Dúvidas comuns</h2><p class="lead"></p>
+<details><summary>É grátis mesmo?</summary><p>É. Não pedimos cartão e não existe cobrança escondida. O servidor não é desligado por falta de pagamento.</p></details>
+<details><summary>Como vocês se mantêm?</summary><p>Com anúncios discretos no painel de controle. Nunca aparecem dentro do jogo.</p></details>
+<details><summary>Meu servidor fica ligado mesmo se eu fechar o jogo?</summary><p>Sim. O servidor roda em nossos computadores, não no seu. Ele con
